@@ -1,11 +1,11 @@
-# byteever Sniffs
+# wpfresher Sniffs
 
-Collection of PHP_CodeSniffer sniffs for ByteEver.
+Collection of PHP_CodeSniffer sniffs for WpFresher.
 
 ## Installation
 
 ```php
-composer require byteever/byteever-sniffs
+composer require wpfresher/wpfresher-sniffs
 ```
 
 ## Usage
@@ -34,11 +34,11 @@ $ composer run lint
 
 ### IDE Integration
 
-Some IDE integrations of PHPCS fail to register the `ByteEver-Default` ruleset. In order to rectify this, place `.phpcs.xml.dist` at your project root:
+Some IDE integrations of PHPCS fail to register the `WpFresher-Default` ruleset. In order to rectify this, place `.phpcs.xml.dist` at your project root:
 
 ```xml
 <?xml version="1.0"?>
-<ruleset name="ByteEver Coding Standards">
+<ruleset name="WpFresher Coding Standards">
 	<description>My projects ruleset.</description>
 
 	<!-- Configs -->
@@ -46,7 +46,7 @@ Some IDE integrations of PHPCS fail to register the `ByteEver-Default` ruleset. 
 	<config name="testVersion" value="7.2-" />
 
 	<!-- Rules -->
-	<rule ref="ByteEver-Defaults" />
+	<rule ref="WpFresher-Defaults" />
 
 	<rule ref="WordPress.WP.I18n">
 		<properties>

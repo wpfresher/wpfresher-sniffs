@@ -1,20 +1,20 @@
 {
-	"name": "byteever/byteever-sniffs",
-	"description": "ByteEver PHP Coding Standards",
+	"name": "wpfresher/wpfresher-sniffs",
+	"description": "WpFresher PHP Coding Standards",
 	"type": "phpcodesniffer-standard",
 	"license": "GPL-3.0-only",
 	"prefer-stable": true,
 	"authors": [
 		{
 			"name": "Sultan Nasir Uddin",
-			"email": "sultan@byteever.com"
+			"email": "sultan@wpfresher.com"
 		}
 	],
 	"keywords": [
 		"phpcs",
 		"standards",
 		"WordPress",
-		"byteever"
+		"wpfresher"
 	],
 	"require": {
 		"wp-coding-standards/wpcs": "^3.0",
@@ -27,7 +27,7 @@
 	"scripts": {
 		"config-cs": [
 			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
-			"\"vendor/bin/phpcs\" --config-set default_standard ByteEver-Default"
+			"\"vendor/bin/phpcs\" --config-set default_standard WpFresher-Default"
 		],
 		"post-install-cmd": "@config-cs",
 		"post-update-cmd": "@config-cs",

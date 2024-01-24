@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<ruleset name="ByteEver-Default">
-    <description>A base ruleset that all other ByteEver rules should extend.</description>
+<ruleset name="WpFresher-Default">
+    <description>A base ruleset that all other WpFresher rules should extend.</description>
 
 	<!-- How to scan -->
 	<!-- Usage instructions: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
