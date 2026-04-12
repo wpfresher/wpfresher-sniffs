@@ -184,7 +184,7 @@ GPL-3.0-only
 ## Author
 
 **Kawsar Ahmed**  
-Email: Kawsar@wpfresher.com
+Email: kawsar@wpfresher.com
 Organization: WpFresher
 
 ---
