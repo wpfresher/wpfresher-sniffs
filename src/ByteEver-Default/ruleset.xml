@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <ruleset name="WpFresher-Default">
-    <description>A base ruleset that all other WpFresher rules should extend.</description>
+	<description>A modern WpFresher PHPCS base ruleset for WordPress plugin development.</description>
 
 	<!-- How to scan -->
 	<!-- Usage instructions: https://github.com/squizlabs/PHP_CodeSniffer/wiki/Usage -->
@@ -25,7 +25,10 @@
 		<properties>
 			<property name="indent" value="1" />
 			<property name="tabIndent" value="true" />
-			<property name="ignoreIndentationTokens" type="array" value="T_COMMENT,T_DOC_COMMENT_OPEN_TAG" />
+			<property name="ignoreIndentationTokens" type="array">
+				<element value="T_COMMENT"/>
+				<element value="T_DOC_COMMENT_OPEN_TAG"/>
+			</property>
 		</properties>
 	</rule>
 
@@ -51,11 +54,7 @@
 		<severity>0</severity>
 	</rule>
 
-	<!-- For CI, don't fail on warnings -->
-	<config name="ignore_warnings_on_exit" value="1"/>
-
-	<!-- WordPress -->
-	<!-- Include the WordPress standard. -->
+	<!-- WordPress Core ruleset -->
 	<rule ref="WordPress">
 		<!-- Forget about file names -->
 		<exclude name="WordPress.Files.FileName"/>
@@ -104,5 +103,11 @@
 	<rule ref="WordPress.WP.GlobalVariablesOverride.OverrideProhibited">
 		<type>warning</type>
 	</rule>
+
+	<!-- Don't fail on warnings during CI -->
+	<config name="ignore_warnings_on_exit" value="1"/>
+
+	<!-- Default PHP version compatibility check -->
+	<config name="testVersion" value="7.4-8.5" />
 
 </ruleset>
