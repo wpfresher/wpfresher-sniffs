@@ -1,13 +1,13 @@
 {
 	"name": "wpfresher/wpfresher-sniffs",
-	"description": "WpFresher PHP Coding Standards",
+	"description": "A comprehensive PHP_CodeSniffer ruleset extending WordPress Coding Standards with WpFresher-specific conventions for modern PHP development",
 	"type": "phpcodesniffer-standard",
 	"license": "GPL-3.0-only",
 	"prefer-stable": true,
 	"authors": [
 		{
 			"name": "Kawsar Ahmed",
-			"email": "kawsarahmed@wpfresher.com"
+			"email": "kawsar@wpfresher.com"
 		}
 	],
 	"keywords": [
@@ -17,21 +17,21 @@
 		"wpfresher"
 	],
 	"require": {
-		"wp-coding-standards/wpcs": "^3.0",
-		"phpcompatibility/phpcompatibility-wp": "^2.1",
-		"dealerdirect/phpcodesniffer-composer-installer": "^0.7"
+		"dealerdirect/phpcodesniffer-composer-installer": "^1.0",
+		"phpcompatibility/phpcompatibility-wp": "^2.1.7",
+		"wp-coding-standards/wpcs": "^3.1.0"
 	},
 	"require-dev": {
 		"roave/security-advisories": "dev-latest"
 	},
 	"scripts": {
-		"config-cs": [
-			"Dealerdirect\\Composer\\Plugin\\Installers\\PHPCodeSniffer\\Plugin::run",
+		"post-install-cmd": [
 			"\"vendor/bin/phpcs\" --config-set default_standard WpFresher-Default"
 		],
-		"post-install-cmd": "@config-cs",
-		"post-update-cmd": "@config-cs",
-		"lint": "\"vendor/bin/phpcs\" . "
+		"post-update-cmd": [
+			"\"vendor/bin/phpcs\" --config-set default_standard WpFresher-Default"
+		],
+		"phpcs": "\"vendor/bin/phpcs\" . "
 	},
 	"config": {
 		"allow-plugins": {
